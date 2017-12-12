@@ -1,26 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Bootstrap Example</title>
+  <title>UANA</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
+
+
 <body>
 
-<div class="jumbotron text-center">
+<div class="jumbotron text-center" style="text-align: center">
   <h1>Network Visualization</h1>
-  <p>UANA - CAPSTONE PROJECT</p> 
-  <form id="fileUpload">
-    
-  </form>
+  <p>UANA - CAPSTONE PROJECT</p>
+  
+  
 </div>
   
 <div class="container">
-  
+  Provide a netstat file below (.txt format required):
+  </br></br>
+  <form id="fileUpload">
+    
+    <input type="file">
+    </br>
+    <button type="submit">Process File</button>
+  </form>
+</div>
+
+<hr>
+
+<div class="container" style="border: 1px solid black; padding-top: 10px; padding-bottom: 10px; background-color: #f1f1f1">
+  Filter graph:<table style="width:100%; text-align: center">
+    <tr style="text-align: center">
+      <td>
+      <form id="filter">
+          Protocol:
+        <select id="protocol">
+          <option value="">All</option>
+          <option value="TCP">TCP</option>
+          <option value="UDP">UDP</option>
+        </select>
+        </td>
+        <td>
+        Specific IP address:
+        <select id="ipAddress">
+          <option value="">All</option>
+        </select>
+        </td>
+        <td>
+        Port Range Start:
+        <select id="portRangeStart">
+          <option value="">N/A</option>
+        </select>
+        
+        Port Range End:
+        <select id="portRangeEnd">
+          <option value="">N/A</option>
+        </select>
+        </td>
+      </form>
+    </tr>
+  </table>
 </div>
 
 </body>
+
+
 </html>
